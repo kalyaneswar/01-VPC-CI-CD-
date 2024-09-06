@@ -8,11 +8,15 @@ pipeline{
 
     stages{
         stage('Current Director with Shell'){
-             // Run multiple shell commands in a single 'sh' block
+            steps{
+                // Run multiple shell commands in a single 'sh' block
                     sh '''
                         echo "Current Directory:"
                         pwd
                     '''
+
+            }
+             
         }
         stage('Current Director with Groovy'){
             script{
