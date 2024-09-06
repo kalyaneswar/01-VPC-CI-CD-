@@ -10,16 +10,15 @@ pipeline{
         stage('Current Director with Shell'){
              // Run multiple shell commands in a single 'sh' block
                     sh '''
-                        echo "Building..."
+                        echo "Current Directory:"
                         pwd
-                        echo "Current Dir in shell"
                     '''
         }
         stage('Current Director with Groovy'){
             script{
                  // Run multiple Groovy commands
                     echo "Building..."
-                    pwd
+                    def currentDir = sh(script: 'pwd', returnStdout: true).trim()
                     echo "This is dir with Groovy"
                     // Add more Groovy commands or logic here
             }
