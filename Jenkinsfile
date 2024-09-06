@@ -60,10 +60,10 @@ pipeline{
                     ok "Yes, we should."               
                 }
                 steps{
-                    sh """"
+                    sh '''
                     echo "We are about it apply"
 
-                    """
+                    '''
                 }
             }
             stage('Destroy') {
@@ -77,10 +77,10 @@ pipeline{
                 ok "Yes, we should."
                 }
             steps {
-                sh """
+                sh '''
                  cd 01-vpc
                  terraform destroy -auto-approve
-                """
+                '''
             }
         }
     }
