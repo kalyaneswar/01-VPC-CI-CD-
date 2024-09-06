@@ -54,6 +54,7 @@ pipeline{
             }
             stage('Parameters') {
             steps {
+                echo "This is parameter example"
                 echo "Hello ${params.PERSON}"
                 echo "Biography: ${params.BIOGRAPHY}"
                 echo "Toggle: ${params.TOGGLE}"
