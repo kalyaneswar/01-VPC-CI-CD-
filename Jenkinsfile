@@ -22,7 +22,7 @@ pipeline{
                 steps{
                     // Run multiple Groovy commands
                     echo "Building..."
-                    def currentDir = sh(script: 'pwd', returnStdout: true).trim()
+                    pwd
                     echo "This is dir with Groovy"
                     // Add more Groovy commands or logic here
 
