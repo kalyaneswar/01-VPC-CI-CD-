@@ -19,7 +19,6 @@ pipeline{
              
         }
         stage('Current Director with Groovy'){
-            script{
                 steps{
                     // Run multiple Groovy commands
                     echo "Building..."
@@ -29,7 +28,7 @@ pipeline{
 
                 }
                  
-            }
+            
              
         }
     }
