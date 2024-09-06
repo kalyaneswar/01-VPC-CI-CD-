@@ -25,6 +25,24 @@ pipeline{
                     '''
                  }             
             }
+            stage('Init'){
+            steps{
+                // Run multiple shell commands in a single 'sh' block
+                    sh '''
+                        echo "Terraform init re-congiure:"
+                        terraform init -reconfigure
+                    '''
+                 }             
+            }
+            stage('PLAN'){
+            steps{
+                // Run multiple shell commands in a single 'sh' block
+                    sh '''
+                        echo "Terraform plan:"
+                        terraform plan
+                    '''
+                 }             
+            }
         }
     
     post{
