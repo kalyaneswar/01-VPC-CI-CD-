@@ -14,10 +14,17 @@ pipeline{
                         echo "Current Directory:"
                         pwd
                     '''
-
+                 }             
             }
-             
-        }
+            stage('List the files'){
+            steps{
+                // Run multiple shell commands in a single 'sh' block
+                    sh '''
+                        echo "list Directory:"
+                        ls
+                    '''
+                 }             
+            }
         }
     
     post{
