@@ -18,18 +18,6 @@ pipeline{
             }
              
         }
-        stage('Current Director with Groovy'){
-                steps{
-                    // Run multiple Groovy commands
-                    echo "Building..."
-                    pwd
-                    echo "This is dir with Groovy"
-                    // Add more Groovy commands or logic here
-
-                }
-                 
-            
-             
         }
     }
     post{
