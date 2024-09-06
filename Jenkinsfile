@@ -50,10 +50,10 @@ pipeline{
             }
             stage('Apply'){
                 when{
-                expression{
-                    params.action == 'Apply'
+                    expression{
+                        params.action == 'Apply'
+                    }
                 }
-            }
                 
                 input {
                     message "Should we continue?"
@@ -64,6 +64,23 @@ pipeline{
                     echo "We are about it apply"
 
                     """
+                }
+            }
+            stage('Destroy') {
+            when{
+                expression{
+                    params.action == 'Destroy'
+                }
+            }
+             input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                }
+            steps {
+                sh """
+                 cd 01-vpc
+                 terraform destroy -auto-approve
+                """
             }
         }
     }
