@@ -61,7 +61,7 @@ pipeline{
                     """
             }
         }
-    
+    }
     post{
          always { 
             echo 'I will always say Hello again!'
@@ -73,5 +73,5 @@ pipeline{
             echo 'Only run the steps in post if the current Pipeline’s or stage’s run has a "failed" status, typically denoted by red in the web UI.'
         }
     }
-    }
+    
 }
