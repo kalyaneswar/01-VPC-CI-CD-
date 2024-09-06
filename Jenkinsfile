@@ -5,9 +5,6 @@ pipeline{
     options{
         timeout(time: 1, unit: 'HOURS')
     }
-    environment {
-
-    }
 
     stages{
         stage('Current Director with Shell'){
