@@ -49,6 +49,11 @@ pipeline{
                  }             
             }
             stage('Apply'){
+                when{
+                expression{
+                    params.action == 'Apply'
+                }
+            }
                 
                 input {
                     message "Should we continue?"
