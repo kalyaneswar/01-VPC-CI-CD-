@@ -79,9 +79,9 @@ pipeline{
                 }
             steps {
                 sh '''
-                 cd 01-vpc
+                 
                  echo "We are about it destroy"
-                echo " terraform destroy -auto-approve"
+                 echo " terraform destroy -auto-approve"
                 '''
             }
         }
