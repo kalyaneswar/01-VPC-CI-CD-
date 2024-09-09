@@ -81,7 +81,7 @@ pipeline{
                 sh '''
                  
                  echo "We are about it destroy"
-                 echo " terraform destroy -auto-approve"
+                 terraform destroy -auto-approve
                 '''
             }
         }
