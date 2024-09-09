@@ -62,6 +62,7 @@ pipeline{
                 steps{
                     sh '''
                     echo "We are about it apply"
+                    terraform apply -auto-approve
 
                     '''
                 }
